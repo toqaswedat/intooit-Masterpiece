@@ -1,3 +1,4 @@
+
 @extends('layouts.admin')
 
 @section('content')
@@ -34,7 +35,7 @@
                         @if($item->role_as == 0)
                         <td>
                             <a href="{{ url('edit-user/'.$item->id) }}" class="btn btn-primary">Edit</a>
-                            <a href="{{ url('delete-user/'.$item->id) }}" class="btn btn-danger">Delete</a>
+                            <a href="{{ url('delete-user/'.$item->id) }}" class="btn btn-danger" >Delete</a>
                         </td>
                         @endif
                     </tr>
@@ -45,3 +46,5 @@
         </div>
     </div>
 @endsection
+
+

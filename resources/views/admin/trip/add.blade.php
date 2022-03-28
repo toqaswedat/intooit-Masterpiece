@@ -15,7 +15,7 @@
                         <hr>
                     </div>
                     <div class="col-md-6 mb-3" >
-                        <label for="">Country</label>
+                        <label for="">Category</label>
                         <select name="cat_id" class="form-control">
                             @foreach($country as $item )
                             <option value="{{ $item->id }}">{{ $item->name }}</option>
@@ -78,7 +78,7 @@
                         <br>
                     </div>
                     <div class="col-mid-12">
-                        <button type="submit" class="btn btn-primary">Add Trip</button>
+                        <button type="submit" class="btn btn-primary">Add Class</button>
                     </div>
 
 

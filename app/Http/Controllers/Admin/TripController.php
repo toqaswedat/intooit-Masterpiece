@@ -29,8 +29,7 @@ class TripController extends Controller
     public function showHighestProducts (){
         $trip = Trip::orderBy('price', 'desc')->get();
         $country = Country::all();
-        return view('destinations', compact('trip','country'))->withErrors(['msg' => 'Highest->Lowest'])
-        ;
+        return view('destinations', compact('trip','country'))->withErrors(['msg' => 'Highest->Lowest']);
     }
     public function showLowestProducts (){
         $trip = Trip::orderBy('price', 'asc')->get();

@@ -16,10 +16,10 @@
             <table class="table table-bordered table-striped overflow-auto">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Reserved Name</th>
+                        <th>#</th>
+
                         <th>User Name</th>
-                        <th>Trip</th>
+                        <th>Class</th>
                         <th>Phone</th>
                         <th>Number of Passengers</th>
                         <th>Price</th>
@@ -28,12 +28,24 @@
                     </tr>
                 </thead>
                 <tbody >
+@php
+    $i=1;
+@endphp
                     @foreach($reservation as $item)
                     <tr class="border">
-                        <td>{{ $item->id }}</td>
+                        <td>{{ $i++ }}</td>
                         <td >{{ $item->name }}</td>
-                        <td >{{ $item->user->name }}</td>
-                        <td >{{ $item->trip->name }}</td>
+
+                        <td >
+
+@foreach ($trips as $trip)
+@if ($item->trip_id==$trip->id)
+{{$trip->name}}
+
+@endif
+@endforeach
+
+                        </td>
                         <td >{{ $item->phone }}</td>
                         <td>{{ $item->quantity }}</td>
                         <td>{{ $item->totalPrice }}</td>

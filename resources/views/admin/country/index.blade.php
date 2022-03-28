@@ -8,8 +8,8 @@
 @endif
     <div class="card">
         <div class="card-header">
-            <h1>Countries Page</h1>
-            <a href="{{ url('add-country') }}" class="btn btn-primary">Add Country!</a>
+            <h1>Category Page</h1>
+            <a href="{{ url('add-country') }}" class="btn btn-primary">Add Category!</a>
             <hr>
         </div>
         <div class="card-body">
@@ -18,7 +18,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Flag</th>
+                        <th>Play Area</th>
                         <th>Action</th>
                     </tr>
                 </thead>

@@ -34,7 +34,7 @@ class ReservationController extends Controller
             return redirect('destinations')->withErrors('You already have a reservation on this period');
             }
         }
-       
+
         $price1 = $oneTrip->price;
         $totalPrice1 = (int)$request->input('quantity');
         $totalPrice2 = $totalPrice1 * $price1;
@@ -50,9 +50,13 @@ class ReservationController extends Controller
     }
 
     public function adminIndex (){
-        $reservation = Reservation::where('status', '=' , 'pending')->get();
-
-        return view('admin.reservation.index', compact('reservation'));
+        $reservation = Reservation::where('status', '=' , 'pending')
+        ->join('users','reservations.user_id','=','users.id')
+        ->join('trips','reservations.trip_id','=','trips.id')
+        ->get(['reservations.id','reservations.name','reservations.trip_id','reservations.phone','reservations.quantity','reservations.totalPrice','reservations.status']);
+        // ->get(['*']);
+        $trips=Trip::all();
+        return view('admin.reservation.index', compact('reservation','trips'));
 
     }
     public function acceptedIndex (){
@@ -65,7 +69,7 @@ class ReservationController extends Controller
         $reservation->status = "accepted";
         $reservation->update();
         return redirect('/reservations')->with('success', 'Reservation Accepted !');
-       
+
 
     }
     public function destroy ($id, $tid){

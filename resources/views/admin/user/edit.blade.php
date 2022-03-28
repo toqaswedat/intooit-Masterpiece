@@ -6,7 +6,7 @@
             <h4>Edit User</h4>
         </div>
         <div class="card-body">
-            <form action="{{ url('update-user/'.$user->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('update-user/'.$user->id) }}" method="POST" >
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -22,14 +22,10 @@
                     </div>
                     <div class="col-md-6 mb-3" >
                         <label for="">Password</label>
-                        <input id="text" type="password" class="form-control" name="password">
+                        <input id="text" value="{{ $user->password }}" type="password" class="form-control" name="password">
                         <hr>
                     </div>
-                    <div class="col-md-6 mb-3" >
-                        <label for="">Repeat Password</label>
-                        <input id="add-rpassword" type="password" class="form-control" name="rpassword">
-                        <hr>
-                    </div>
+
                     <div class="col-md-12 mb-3" >
                         <label for="">Admin</label>
                         <input  type="checkbox" name="role_as">

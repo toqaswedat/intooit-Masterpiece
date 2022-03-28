@@ -33,7 +33,7 @@
                                     <div class="col-lg-12">
                                         <div class="single_select">
                                             <select onchange="window.location.href=this.options[this.selectedIndex].value;">
-                                                <option data-display="Country">Country</option>
+                                                <option data-display="Category">Category</option>
                                                 @foreach($country as $item )
                                                 <option value="{{ url('/destinations/'.$item->id) }}">{{$item->name}}</option>
 
@@ -44,7 +44,7 @@
                                     <div class="col-lg-12">
                                         <div class="single_select">
                                             <select onchange="window.location.href=this.options[this.selectedIndex].value;">
-                                                <option data-display="Travel type">Sort</option>
+                                                <option data-display="Filter by price">Sort</option>
                                                 <option value="{{ url('/destinations-h2l')}}">Price:Highest->Lowest</option>
                                                 <option value="{{ url('/destinations-l2h')}}">Price:Lowest->Highest</option>
 

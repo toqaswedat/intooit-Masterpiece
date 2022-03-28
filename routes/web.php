@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Mar3i
 Route::get('/', [TripController::class, 'showAllProductsWelcome']);
 Route::get('/contact', function () {
     return view('contact');
@@ -47,11 +46,11 @@ Route::get('delete-reserve/{id}/{tid}', [ReservationController::class, 'destroyU
 
 
 
-// Sanad
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::middleware(['auth','isAdmin'])->group(function() {
-    Route::get('dashboard', [FrontendController::class, 'index']);
+Route::get('dashboard', [FrontendController::class, 'index']);
 
     // Categories /////////////////////
 

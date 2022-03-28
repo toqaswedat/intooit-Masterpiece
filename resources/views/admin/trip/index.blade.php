@@ -8,8 +8,8 @@
 @endif
     <div class="card">
         <div class="card-header">
-            <h1>Trips Page</h1>
-            <a href="{{ url('add-trip') }}" class="btn btn-primary">Add Trip!</a>
+            <h1>Class Page</h1>
+            <a href="{{ url('add-trip') }}" class="btn btn-primary">Add Class!</a>
             <hr>
         </div>
         <div class="card-body table-responsive ">
@@ -18,7 +18,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Country</th>
+                        <th>Category</th>
                         <th>Brief</th>
                         <th>Description</th>
                         <th>Image</th>
@@ -34,7 +34,14 @@
                     <tr class="border">
                         <td>{{ $item->id }}</td>
                         <td >{{ $item->name }}</td>
-                        <td >{{ $item->country->name }}</td>
+                        <td >
+
+                           @foreach ($country as $itm)
+                            @if ($item->cat_id==$itm->id )
+                            {{$itm->name}}
+                            @endif
+                           @endforeach
+                        </td>
                         <td >{{ $item->brief }}</td>
                         <td>{{ $item->description }}</td>
                         <td>

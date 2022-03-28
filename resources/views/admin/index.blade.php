@@ -17,7 +17,7 @@
         <a href="{{ url('countries') }}">
             <div class="card">
                 <div class="card-head">
-                    <h4>Countries</h4>
+                    <h4>Category</h4>
                     <p>{{$country->count()}}</p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
         <a href="{{ url('trips') }}">
             <div class="card">
                 <div class="card-head">
-                    <h4>Trips Offers</h4>
+                    <h4>Class Offers</h4>
                     <p>{{$trip->count()}}</p>
                 </div>
             </div>

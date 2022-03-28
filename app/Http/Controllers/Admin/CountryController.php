@@ -17,7 +17,7 @@ class CountryController extends Controller
     public function add (){
         return view('admin.country.add');
     }
-  
+
     public function insert (Request $request ){
         $country = new Country();
         if($request->hasFile('image'))
@@ -30,7 +30,7 @@ class CountryController extends Controller
         }
         $country->name = $request->input('name');
         $country->save();
-        return redirect('/dashboard')->with('status' , "Country Added Successfully!!!");
+        return redirect('/countries')->with('status' , "Country Added Successfully!!!");
     }
 
     public function edit($id){
@@ -69,6 +69,6 @@ class CountryController extends Controller
             }
         }
         $country->delete();
-        return redirect('/counries')->with('success', 'Deleted Successfully!');
+        return redirect('/countries')->with('success', 'Deleted Successfully!');
     }
 }

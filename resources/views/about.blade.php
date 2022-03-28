@@ -123,7 +123,7 @@
                                         </div>
                                         <p>"Amazing coordination and brilliant task, it was really easy to book a trip and the procedure was super smooth."</p>
                                         <div class="testmonial_author">
-                                            <h3>- Ghassan Dabak</h3>
+                                            <h3>- Toqa Swedat</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@
                                         </div>
                                         <p>"The trips that they have are amazing and the tour guides showed us places that are very beautiful and unique."</p>
                                         <div class="testmonial_author">
-                                            <h3>- Mahdi Suleiman.</h3>
+                                            <h3>- Toqa Swedat.</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                                         </div>
                                         <p>"What an amazing experience and an amazing staff that made sure everything went smoothly, it was an amazing experience."</p>
                                         <div class="testmonial_author">
-                                            <h3>- Azmi Tamam</h3>
+                                            <h3>- Toqa Swedat</h3>
                                         </div>
                                     </div>
                                 </div>
